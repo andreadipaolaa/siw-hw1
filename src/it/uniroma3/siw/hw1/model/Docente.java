@@ -1,6 +1,7 @@
 package it.uniroma3.siw.hw1.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -13,6 +14,12 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Docente {
+
+	
+
+	public Docente() {
+		this.corsiTenuti = new ArrayList<Corso>();
+	}
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

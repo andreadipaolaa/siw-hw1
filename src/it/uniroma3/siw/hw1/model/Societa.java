@@ -9,6 +9,18 @@ import javax.persistence.OneToOne;
 @Entity
 public class Societa {
 	
+	
+	
+	public Societa(String ragioneSociale, Indirizzo indirizzo, String numTelefono) {
+		this.ragioneSociale = ragioneSociale;
+		this.indirizzo = indirizzo;
+		this.numTelefono = numTelefono;
+	}
+	
+	public Societa() {
+		return;
+	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
