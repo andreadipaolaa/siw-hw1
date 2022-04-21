@@ -1,10 +1,10 @@
 package it.uniroma3.siw.hw1.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Societa {
@@ -15,10 +15,10 @@ public class Societa {
 	
 	private String ragioneSociale;
 	
-	@Column(length=2500)
-	private String sede;
+	@OneToOne
+	private Indirizzo indirizzo;
 	
-	private int numTelefono;
+	private String numTelefono;
 
 	public long getId() {
 		return id;
@@ -36,19 +36,19 @@ public class Societa {
 		this.ragioneSociale = ragioneSociale;
 	}
 
-	public String getSede() {
-		return sede;
+	public Indirizzo getIndirizzo() {
+		return indirizzo;
 	}
 
-	public void setSede(String sede) {
-		this.sede = sede;
+	public void setSede(Indirizzo indirizzo) {
+		this.indirizzo = indirizzo;
 	}
 
-	public int getNumTelefono() {
+	public String getNumTelefono() {
 		return numTelefono;
 	}
 
-	public void setNumTelefono(int numTelefono) {
+	public void setNumTelefono(String numTelefono) {
 		this.numTelefono = numTelefono;
 	}
 }
