@@ -1,6 +1,5 @@
 package it.uniroma3.siw.hw1.main;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -12,6 +11,7 @@ import javax.persistence.TypedQuery;
 import it.uniroma3.siw.hw1.model.Corso;
 import it.uniroma3.siw.hw1.model.Docente;
 import it.uniroma3.siw.hw1.model.Societa;
+
 
 public class HomeworkMain {
 	public static void main(String[] args) {
